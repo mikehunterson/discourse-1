@@ -43,6 +43,53 @@ td.flaggers td {
   border-top: none;
 }
 
+.site-texts {
+  .search-area {
+    margin-bottom: 2em;
+  }
+  .text-highlight {
+    font-weight: bold;
+  }
+
+  .site-text {
+    padding: 0.5em;
+    cursor: pointer;
+    &:hover {
+      background-color: dark-light-diff($primary, $secondary, 98%, -60%);
+    }
+
+    h3 {
+      font-weight: normal;
+      font-size: 1.1em;
+    }
+
+    button.edit {
+      float: right;
+    }
+    pre.site-text-value {
+      margin: 0.5em 0 0 0;
+      max-height: 200px;
+      overflow: hidden;
+      color: dark-light-diff($primary, $secondary, 40%, -10%);
+    }
+
+  }
+
+  .edit-site-text {
+    textarea {
+      width: 80%;
+    }
+
+    .save-messages, .title {
+      margin-bottom: 1em;
+    }
+
+    .go-back {
+      margin-top: 1em;
+    }
+  }
+}
+
 .content-list li a span.count {
   font-size: 0.857em;
   float: right;

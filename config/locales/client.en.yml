@@ -2481,8 +2481,12 @@ en:
           dropdown: "Dropdown"
 
       site_text:
-        none: "Choose a type of content to begin editing."
+        search: "Search for text to edit"
         title: 'Text Content'
+        edit: 'edit'
+        revert: "Revert Changes"
+        revert_confirm: "Are you sure you want to revert your changes?"
+        go_back: "Back to Search"
 
       site_settings:
         show_overriden: 'Only show overridden'
