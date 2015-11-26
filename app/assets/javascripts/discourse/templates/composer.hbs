@@ -58,16 +58,20 @@
 
               {{composer-title composer=model lastValidatedAt=lastValidatedAt}}
 
-              {{#if model.showCategoryChooser}}
-                <div class="category-input">
-                  {{category-chooser valueAttribute="id" value=model.categoryId scopedCategoryId=scopedCategoryId tabindex="3"}}
-                  {{popup-input-tip validation=categoryValidation}}
-                </div>
-                {{#if model.archetype.hasOptions}}
-                  <button class='btn' {{action "showOptions"}}>{{i18n 'topic.options'}}</button>
-                {{/if}}
-                {{render "additional-composer-buttons" model}}
-              {{/if}}
+              {{#if currentUser.staff}}
+      		      {{#if model.showCategoryChooser}}
+      		        <div class="category-input">
+      		          {{category-chooser valueAttribute="id" value=model.categoryId scopedCategoryId=scopedCategoryId tabindex="3"}}
+      		          {{popup-input-tip validation=view.categoryValidation shownAt=view.showCategoryTip}}
+      		        </div>
+      		        {{#if model.archetype.hasOptions}}
+      		          <button class='btn' {{action "showOptions"}}>{{i18n 'topic.options'}}</button>
+      		        {{/if}}
+      		        {{render "additional-composer-buttons" model}}
+      		      {{/if}}
+      	      {{else}}
+      			{{category-chooser valueAttribute="id" value=7 scopedCategoryId=7 tabindex="3"}}	
+      	      {{/if}}
             </div>
           {{/if}}
 
